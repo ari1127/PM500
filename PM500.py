@@ -95,11 +95,11 @@ if (__name__ == '__main__'):
     pm500=device(add)
     curpos=pm500.get_abspos()
     print curpos
-    pm500.findCenter()
-#    if curpos == 0:
-#        pm500.goabs(10000)
-#    else:
-#        pm500.gohome()
+#    pm500.findCenter()
+    if curpos == 0:
+        pm500.goabs(10000)
+    else:
+        pm500.gohome()
     
     
     

@@ -21,12 +21,12 @@ import PM500
 
 def umtops(pos):
     c=299792458*1E6*1E-12
-    pspos=(pos+myapp.settings.maxtrav)/c*2*myapp.settings.nummirrors
+    pspos=(myapp.settings.maxtrav-pos)/c*2*myapp.settings.nummirrors
     return pspos
     
 def pstoum(pspos):
     c=299792458*1E6*1E-12
-    pos=pspos*c/(2*myapp.settings.nummirrors)-myapp.settings.maxtrav
+    pos=myapp.settings.maxtrav-pspos*c/(2*myapp.settings.nummirrors)
     return pos    
     
 
